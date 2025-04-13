@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search ssh-agent direnv)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -70,3 +70,26 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+# export GOOGLE_APPLICATION_CREDENTIALS=/home/asia/code/nnoble13/gcp/disco-task-401513-d04d0479e703.json
+export PYTHONPATH="/home/asia/code/nnoble13/04-Decision-Science/01-Project-Setup/data-context-and-setup:$PYTHONPATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/asia/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/asia/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/asia/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/asia/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# >>> export GOOGLE_APPLICATION_CREDENTIALS=/home/asia/code/nnoble13/kizpliz/disco-task-401513-13e29a13a4ae.json
+export GOOGLE_APPLICATION_CREDENTIALS=/home/asia/code/nnoble13/kizpliz/chrome-duality-416609-5c40ae09a1a9.json
+
+export PATH=/home/asia/code/:$PATH
+alias lewrenamefiles=/home/asia/code/lw_bulk_file_renamer.zsh
